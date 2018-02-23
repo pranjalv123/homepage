@@ -1,0 +1,72 @@
+.header {
+  color='blue';
+}
+
+.title {
+  font-family:Bellefair;
+  font-size: 48pt;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  text-align: center;
+}
+
+.navbar {
+  font-family:Bellefair;
+  text-align: justify;
+  text-justify: distribute-all-lines;
+  max-width: 80%;
+  min-width:400px;
+  margin:auto;
+}
+
+.navbar div {
+  width:auto;
+  display: inline-block;
+  border-bottom: 1px black solid;
+}
+
+.navbar .selected {
+  border-bottom: 3px solid;
+  /* border-top: 3px solid; */
+}
+
+.navbar .stretch {
+  width: 100%;
+  display: inline-block;
+  font-size: 0;
+  line-height: 0
+}
+
+.main {
+  max-width: 70%;
+  min-width:400px;
+  margin:auto;
+  display:block;
+}
+
+.general {
+
+}
+
+.blogposts {
+
+}
+
+.blogposts h1 {
+  font-family:sans-serif;
+}
+.blogposts h2 {
+  font-family:sans-serif;
+  font-size:12pt;
+}
+.blogposts .tags {
+  color:blue;
+}
+.blogposts .tags span {
+  border-bottom:1px solid blue;
+}
+
+.blogposts .post {
+
+}

@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load wagtailcore_tags %}
+
+{% block navitems %}
+{% for nav in mainpages %}
+    <div class="{{ nav.specific.label }} {% if nav.specific.label == label %} selected {% endif %}"> <a href="{% pageurl nav.specific %}">{{ nav.specific.label }}</a></div>
+{% endfor %}
+{% endblock %}
+{% block body_class %}template-homepage{% endblock %}
+{% load wagtailcore_tags %}
+
+{% block general %}
+{{ page.general }}
+{% endblock %}
+
+{% block posts %}
+{% for post in blogpages %}
+<div class="post">
+  <h1> {{ post.specific.tile }} </h1>
+  <h2> {{ post.specific.date }} </h2>
+  <div class="tags">
+    {% for tag in post.specific.tags.all %}
+      <span>{{ tag.specific.text }}</span>
+    {% endfor %}
+  </div>
+{{ post.specific.body }}
+</div>
+{% endfor %}
+{% endblock %}
