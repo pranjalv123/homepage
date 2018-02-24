@@ -17,3 +17,12 @@ CACHES = {
         }
     }
 }
+
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'homepage',
+        'USER': 'homepage'
+    }
+}
