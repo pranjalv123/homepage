@@ -44,6 +44,12 @@ class BlogPage(Page):
         FieldPanel('date'),
         StreamFieldPanel('body', classname="full"),
     ]
+    def get_context(self, request):
+        context = super(MainPage, self).get_context(request)
+        main_pages = MainPage.objects.all()
+        context['mainpages'] = main_pages
+        context['label'] = self.get_parent().label
+        return context
 
 class MainPage(Page):
     general = StreamField([
