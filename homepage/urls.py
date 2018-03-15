@@ -11,7 +11,7 @@ from wagtail.documents import urls as wagtaildocs_urls
 from search import views as search_views
 
 urlpatterns = [
-    #re_path(r'^django-admin/', include('django.contrib.admin.site.urls')),
+    re_path(r'^django-admin/', admin.site.urls),
 
     re_path(r'^admin/', include(wagtailadmin_urls)),
     re_path(r'^documents/', include(wagtaildocs_urls)),
