@@ -19,8 +19,7 @@ except ImportError:
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'homepage',
-        'USER': 'homepage'
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(PROJECT_DIR, 'sq.db'),
     }
 }
