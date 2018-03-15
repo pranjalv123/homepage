@@ -36,7 +36,11 @@ class BlogPage(Page):
     search_fields = Page.search_fields + [
         index.SearchField('body'),
     ]
+    promote_panels= Page.promote_panels + [
+        FieldPanel('tags'),
+    ]
     content_panels = Page.content_panels + [
+
         FieldPanel('date'),
         StreamFieldPanel('body', classname="full"),
     ]

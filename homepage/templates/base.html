@@ -46,6 +46,7 @@
         {% endblock %}
 
         <div class="main">
+{% block content %}
           <div class="general">
           {% block general %}{% endblock %}
           </div>
@@ -53,7 +54,7 @@
           <div class="blogposts">
             {% block posts %}{% endblock %}
           </div>
-
+{% endblock %}
         </div>
         {# Global javascript #}
         <script type="text/javascript" src="{% static 'js/homepage.js' %}"></script>
