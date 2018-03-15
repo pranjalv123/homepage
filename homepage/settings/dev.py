@@ -16,3 +16,11 @@ try:
     from .local import *
 except ImportError:
     pass
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'homepage',
+        'USER': 'homepage'
+    }
+}

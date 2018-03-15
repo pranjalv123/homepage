@@ -1,5 +1,5 @@
 Django>=1.11
 wagtail>=1.13
 django-redis
-mysql-python
+mysqlclient
 uwsgi
