@@ -45,11 +45,15 @@ class BlogPage(Page):
         StreamFieldPanel('body', classname="full"),
     ]
     def get_context(self, request):
-        context = super(MainPage, self).get_context(request)
+        context = super(BlogPage, self).get_context(request)
         main_pages = MainPage.objects.all()
         context['mainpages'] = main_pages
-        context['label'] = self.get_parent().label
+        parent = MainPage.objects.parent_of(self).live().first()
+
+        context['label'] = parent.label
         return context
+
+    parent_page_types = ['home.MainPage']
 
 class MainPage(Page):
     general = StreamField([
