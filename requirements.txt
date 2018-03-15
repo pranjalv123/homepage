@@ -1,5 +1,5 @@
-Django>=1.11,<1.12
-wagtail>=1.13,<1.14
+Django>=1.11
+wagtail>=1.13
 django-redis
 mysql-python
 uwsgi
